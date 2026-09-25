@@ -1,0 +1,1 @@
+symbol,name,price_date,last_price,prev_close,pct_change_1d,high_52w,low_52w,pct_from_52w_high,pct_from_52w_low,near_52w_low,vol_daily,vol_weekly_avg,vol_monthly_avg,vol_weekly_total,vol_monthly_total,up_days_last5,last5_closes,last5_dates,vol_vs_weekly_ratio,market_cap,market_cap_cr,shares_outstanding,stage1_pass,stage2_pass,stage3_pass,final_pass

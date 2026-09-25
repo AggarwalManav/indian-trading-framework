@@ -1,0 +1,23 @@
+# --- SECRETS: never commit to a public repo ---
+data/broker_creds.env
+*.env
+.streamlit/secrets.toml
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Logs
+data/logs/
+*.log
+
+# OS
+.DS_Store
+
+# Regenerable large cache (32MB Dhan scrip master — re-downloaded on demand)
+data/cache/dhan_scrip_master.csv
+
+# NOTE: we DO commit these on purpose (they are the deployed data) —
+#   data/screener.db, data/*.csv, data/cache/bhav/*.csv,
+#   data/shares_outstanding.csv, data/market_cap_override.csv

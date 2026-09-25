@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  macOS launchd job: runs the daily NSE screen at 18:00 local time (after the
+  3:30pm IST market close). Adjust the Hour/Minute to your timezone.
+
+  Install:
+    cp com.manav.tradingframework.plist ~/Library/LaunchAgents/
+    launchctl load  ~/Library/LaunchAgents/com.manav.tradingframework.plist
+  Uninstall:
+    launchctl unload ~/Library/LaunchAgents/com.manav.tradingframework.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.manav.tradingframework</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/manavaggarwal/indian-trading-framework/run_daily.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>18</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/Users/manavaggarwal/indian-trading-framework/data/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/manavaggarwal/indian-trading-framework/data/logs/launchd.err.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
